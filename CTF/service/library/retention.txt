@@ -1,0 +1,5 @@
+Retention policy
+================
+
+Cards are kept until the service volume is removed.
+Do not store production credentials in training deployments.

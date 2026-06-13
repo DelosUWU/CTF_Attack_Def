@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PatchBoard</title>
+    <link rel="stylesheet" href="/static/styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="topbar">
+        <div>
+          <h1>PatchBoard</h1>
+          <p>Private handoff cards for incident response teams.</p>
+        </div>
+        <div id="session" class="session">Signed out</div>
+      </section>
+
+      <section class="grid">
+        <form id="auth-form" class="panel">
+          <h2>Account</h2>
+          <label>
+            Username
+            <input id="username" autocomplete="username" required>
+          </label>
+          <label>
+            Email
+            <input id="email" type="email" autocomplete="email" value="user@example.local">
+          </label>
+          <label>
+            Password
+            <input id="password" type="password" autocomplete="current-password" required>
+          </label>
+          <div class="actions">
+            <button type="button" id="register">Register</button>
+            <button type="submit">Log in</button>
+            <button type="button" id="logout">Log out</button>
+          </div>
+        </form>
+
+        <form id="card-form" class="panel">
+          <h2>New Card</h2>
+          <label>
+            Title
+            <input id="title" maxlength="90" required>
+          </label>
+          <label>
+            Private note
+            <textarea id="body" rows="7" required></textarea>
+          </label>
+          <button type="submit">Create card</button>
+        </form>
+
+        <section class="panel wide">
+          <div class="inline-head">
+            <h2>Workspace</h2>
+            <button id="refresh" type="button">Refresh</button>
+          </div>
+          <div class="search">
+            <input id="search" placeholder="Search my handoff cards">
+            <button id="run-search" type="button">Search</button>
+          </div>
+          <div id="cards" class="cards"></div>
+        </section>
+
+        <section class="panel">
+          <h2>Library</h2>
+          <p class="small">Download team manuals and onboarding notes.</p>
+          <div class="actions">
+            <button data-doc="onboarding.txt" class="library-link" type="button">Onboarding</button>
+            <button data-doc="retention.txt" class="library-link" type="button">Retention</button>
+          </div>
+          <pre id="library-output"></pre>
+        </section>
+      </section>
+
+      <div id="toast" class="toast" role="status"></div>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+services:
+  patchboard:
+    build: .
+    container_name: patchboard
+    environment:
+      PORT: "8080"
+      LEDGER_DATA: /app/service/data
+    ports:
+      - "8080:8080"
+    volumes:
+      - patchboard-data:/app/service/data
+    restart: unless-stopped
+
+volumes:
+  patchboard-data:

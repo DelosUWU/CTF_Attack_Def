@@ -1,0 +1,6 @@
+PatchBoard onboarding
+=====================
+
+Create a private handoff card for each incident response task.
+Use the receipt link only when another team member needs temporary access.
+The workspace search is intended for your own cards.

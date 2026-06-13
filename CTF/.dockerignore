@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.checker_flags.json
+.git/
+service/data/
+*.db
+*.sqlite
+*.sqlite3
