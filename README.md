@@ -7,6 +7,10 @@ PatchBoard - учебный сервис для Attack-Defense CTF с намер
 ## Запуск
 
 ```bash
+docker pull python:3.12-slim
+```
+
+```bash
 docker compose up --build
 ```
 
